@@ -1,40 +1,61 @@
-<div class="page-header">
-  <h1>{{ page.title }} <small>Supporting tagline</small></h1>
-</div>
+
+  <div style="width: 100%">
+
 
 <div class="row">
   <div class="span8">
+   <h1 class="title">{{ page.title }}</h1>
     {{ content }}
     <hr>
-    <div class="pagination">
+    <div class="pagination" align = "right">
       <ul>
       {% if page.previous %}
-        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇</a></li>
       {% else %}
-        <li class="prev disabled"><a>&larr; Previous</a></li>
+        <li class="prev disabled"><a>&larr; 上一篇</a></li>
       {% endif %}
-        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+	  
       {% if page.next %}
-        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇 &rarr;</a></li>
       {% else %}
-        <li class="next disabled"><a>Next &rarr;</a>
+        <li class="next disabled"><a>下一篇 &rarr;</a>
       {% endif %}
       </ul>
     </div>
     <hr>
-    {% include JB/comments %}
   </div>
   
-  <div class="span4">
-    <h4>Published</h4>
+  <div class="span4" >
+  <div style ="position:fixed;  margin-left:40px">
+    <h3>Published</h3>
     <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
 
   {% unless page.tags == empty %}
-    <h4>Tags</h4>
+    <h3>Tags</h3>
     <ul class="tag_box">
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
     </ul>
   {% endunless %}  
+  
+   <div id="sidebar" class="sidebar" style="">
+   <ul>
+      <li class="active"></li>
+	  
+	</ul>
+	</div>
+	</div>
   </div>
+
 </div>
+{% include JB/comments %}
+</div>
+
+
+
+
+
+
+
+
+

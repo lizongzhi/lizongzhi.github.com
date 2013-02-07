@@ -4,19 +4,36 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
+markdown: rdiscount
 pygments: true
 
+
+
+topbar:
+  #- 
+  #  url : '/footmark/index.html'
+  #  title : 'Footmark'
+  - 
+    url : '/archive.html'
+    title : '文章存档'
+  -
+    url : '/categories.html'
+    title : '博文分类'
+  -
+    url : '/tags.html'
+    title : '我的标签'
+	
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : 日月星辰
+tagline:
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : 日月星辰
+  email : lizongzhi@hotmail.com	
+  github : lizongzhi
+  twitter : 
+  feedburner : 
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
