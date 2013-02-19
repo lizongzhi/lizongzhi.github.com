@@ -40,7 +40,6 @@ h3 {margin:0px 0 10px 0}
 
 /* SIDEBAR ======================================================== */ 
 .sidebar {
-  position:fixed;
   top:190px;
   margin-left:0;
   z-index:0;
